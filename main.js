@@ -6,6 +6,7 @@ const periodMenu = document.querySelectorAll('.card_user_period_item')
 // console.log(dataCurrentTime)
 // console.log(dailyMenu)
 
+// Function that gets data from local json file
 const dataRequest = async () => {
     try {
         const URL = './data.json'
@@ -13,6 +14,7 @@ const dataRequest = async () => {
         const data = await response.json()
         // console.log(data[3].timeframes)
 
+        // Function that sets weekly period by default
         periodMenu.forEach((item, index) => {
             data.forEach((item, index) => {
                 dataTitle[index].innerHTML = item.title
@@ -20,6 +22,7 @@ const dataRequest = async () => {
                 dataPreviousTime[index].innerHTML = `Last Week - ${item.timeframes.weekly.previous}hrs`
             });
 
+            // Function that establishes period according to the item receives a click
             item.addEventListener('click', () => {
                 if (index === 0) {
                     for (const menu of periodMenu) {
@@ -62,5 +65,6 @@ const dataRequest = async () => {
     }
 }
 
+// Function call
 dataRequest()
 
