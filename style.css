@@ -1,0 +1,371 @@
+/* GENERAL STYLES */
+:root {
+    --blue: hsl(246, 80%, 60%);
+    --light-red-work: hsl(15, 100%, 70%);
+    --soft-blue-play: hsl(195, 74%, 62%);
+    --light-red-study-: hsl(348, 100%, 68%);
+    --lime-green-exercise: hsl(145, 58%, 55%);
+    --violet-social: hsl(264, 64%, 52%);
+    --soft-orange-self-care: hsl(43, 84%, 65%);
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --card-hover-blue: hsl(235, 45%, 35%);
+    --pale-blue: hsl(236, 100%, 87%);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    visibility: hidden;
+    position: absolute;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    background-color: var(--very-dark-blue);
+}
+
+/* CONTAINER STYLES */
+.container {
+    width: 100%;
+    max-width: 1143px;
+    height: fit-content;
+    min-height: 520px;
+    padding: 1rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(0, 255px));
+    grid-template-rows: repeat(auto-fit, 244px);
+    gap: 1.875rem;
+}
+
+/* CARDS STYLES */
+/* CARD USER AVATAR */
+.card_user {
+    height: 518px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    border-radius: 1rem;
+    background-color: var(--dark-blue);
+}
+
+.card_user_avatar {
+    width: 100%;
+    height: 354px;
+    padding: 2.35rem 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    background-color: var(--blue);
+    transition: all .3s ease-in-out;
+}
+
+.card_user_avatar_img {
+    width: 78px;
+    height: 78px;
+    margin-bottom: 2.35rem;
+    border-radius: 50%;
+    outline: 3px solid white;
+    transition: all .3s ease-in-out;
+}
+
+.card_user_avatar_info_title {
+    margin-bottom: .15rem;
+    font-size: .95rem;
+    font-weight: 300;
+    color: var(--pale-blue);
+}
+
+.card_user_avatar_info_name {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: white;
+    opacity: .95;
+}
+
+.card_user_period {
+    padding: 1.6rem 0 0 2rem;
+    transition: all .3s ease-in-out;
+}
+
+.card_user_period_item {
+    margin-bottom: 1.2rem;
+    font-size: 1.15rem;
+    font-weight: 300;
+    color: var(--desaturated-blue);
+    list-style: none;
+    transition: all .3s ease-in-out;
+}
+
+.card_user_period_item:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.period_active {
+    color: white;
+}
+
+.card_user_period_item:nth-child(2) {
+    margin-bottom: 1.19rem;
+}
+
+/* CARDS ACTIVITIES */
+.card_activities {
+    width: 255px;
+    height: 244px;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 1rem 1rem 1.25rem 1.25rem;
+}
+
+.card_activities:nth-child(2) {
+    background-color: var(--light-red-work);
+    background-image: url(images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-position-x: 9.95rem;
+    background-position-y: -.68rem;
+}
+
+.card_activities:nth-child(3) {
+    background-color: var(--soft-blue-play);
+    background-image: url(images/icon-play.svg);
+    background-repeat: no-repeat;
+    background-position-x: 9.9rem;
+    background-position-y: -.3rem;
+}
+
+.card_activities:nth-child(4) {
+    background-color: var(--light-red-study-);
+    background-image: url(images/icon-study.svg);
+    background-repeat: no-repeat;
+    background-position-x: 9.95rem;
+    background-position-y: -.4rem;
+}
+
+.card_activities:nth-child(5) {
+    background-color: var(--lime-green-exercise);
+    background-image: url(images/icon-exercise.svg);
+    background-repeat: no-repeat;
+    background-position-x: 9.8rem;
+    background-position-y: -.05rem;
+}
+
+.card_activities:nth-child(6) {
+    background-color: var(--violet-social);
+    background-image: url(images/icon-social.svg);
+    background-repeat: no-repeat;
+    background-position-x: 10.45rem;
+    background-position-y: -.9rem;
+}
+
+.card_activities:nth-child(7) {
+    background-color: var(--soft-orange-self-care);
+    background-image: url(images/icon-self-care.svg);
+    background-repeat: no-repeat;
+    background-position-x: 10.8rem;
+    background-position-y: -.65rem;
+}
+
+.card_activities_data {
+    width: 100%;
+    height: 199px;
+    padding: 1.8rem 1.9rem;
+    border-radius: 1rem;
+    background-color: var(--dark-blue);
+}
+
+.card_activities_data:hover {
+    cursor: pointer;
+    background-color: var(--card-hover-blue);
+}
+
+.card_activities_data_header {
+    width: 100%;
+    margin-bottom: 1.45rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card_activities_data_header_title {
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: .03rem;
+}
+
+.card_activities_data_header_icon {
+    margin-bottom: .1rem;
+}
+
+.svg path {
+    transition: all .2s ease-in-out;
+}
+
+.svg:hover path{
+    fill: #fff;
+    border: 1px solid white;
+}
+
+.card_activities_data_content_hour {
+    margin-bottom: .45rem;
+    font-size: 3.48rem;
+    font-weight: 300;
+}
+
+.card_activities_data_content_week {
+    font-size: .95rem;
+    font-weight: 300;
+    color: var(--pale-blue);
+}
+
+@media screen and (max-width: 960px) {
+    
+    body {
+        min-height: 900px;
+    }
+
+}
+
+@media screen and (max-width: 572px) {
+    
+    .container {
+        width: 100%;
+        max-width: 500px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .card_user {
+        width: 90vw;
+        height: fit-content;
+    }
+
+    .card_user_avatar {
+        width: 100%;
+        height: fit-content;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .card_user_avatar_img {
+        width: 65px;
+        height: 65px;
+        margin: 0 1rem 0 0;
+    }
+
+    .card_user_avatar_info_name {
+        font-size: 1.5rem;
+    }
+
+    .card_user_period {
+        padding: 1.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card_user_period_item,
+    .card_user_period_item:nth-child(2) {
+        margin-bottom: 0;
+    }
+
+    .card_activities {
+        width: 90vw;
+        height: 160px;
+    }
+
+    .card_activities_data {
+        height: 120px;
+        padding: 1.5;
+    }
+
+    .card_activities_data_header {
+        margin-bottom: .6rem;
+    }
+
+    .card_activities_data_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card_activities_data_content_hour {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .card_activities.card_activities {
+        background-position-x: 93%;
+    }
+
+    .card_activities:nth-child(6),
+    .card_activities:nth-child(7) {
+        background-position-x: 95%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
