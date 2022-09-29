@@ -19,11 +19,6 @@ a {
     color: inherit;
 }
 
-h1 {
-    opacity: 0;
-    position: absolute;
-}
-
 * {
     margin: 0;
     padding: 0;
