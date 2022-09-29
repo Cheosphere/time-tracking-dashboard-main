@@ -6,6 +6,8 @@ El desafío es construir este tablero y lograr que se parezca lo más posible al
 - CSS
 - JS Vanilla
 
+![desktop-design](https://user-images.githubusercontent.com/112582420/193065350-95e8665e-758d-42e3-b0a5-b64f6c436dda.jpg)
+
 # Guía de Estilo
 
 ## Diseño
