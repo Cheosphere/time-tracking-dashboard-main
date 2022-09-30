@@ -32,7 +32,7 @@ const dataRequest = async () => {
                     data.forEach((item, index) => {
                         dataTitle[index].innerHTML = item.title
                         dataCurrentTime[index].innerHTML = `${item.timeframes.daily.current}hrs`
-                        dataPreviousTime[index].innerHTML = `Last Week - ${item.timeframes.daily.previous}hrs`
+                        dataPreviousTime[index].innerHTML = `Last Day - ${item.timeframes.daily.previous}hrs`
                     });
                 }
                 if (index === 1) {
@@ -54,7 +54,7 @@ const dataRequest = async () => {
                     data.forEach((item, index) => {
                         dataTitle[index].innerHTML = item.title
                         dataCurrentTime[index].innerHTML = `${item.timeframes.monthly.current}hrs`
-                        dataPreviousTime[index].innerHTML = `Last Week - ${item.timeframes.monthly.previous}hrs`
+                        dataPreviousTime[index].innerHTML = `Last Month - ${item.timeframes.monthly.previous}hrs`
                     });
                 }
             })
